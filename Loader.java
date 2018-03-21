@@ -25,5 +25,6 @@ public class Loader
         System.out.println(tom.getWeight() + " - " + tom.getStatus());
         tom.defecation();
         System.out.println(tom.getWeight() + " - " + tom.getStatus());
+        System.out.println(tom.getWeightFood());
     }
 }
