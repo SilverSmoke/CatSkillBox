@@ -7,6 +7,7 @@ public class Cat
 
     private Double minWeight;
     private Double maxWeight;
+    private static int count;
 
     public Cat()
     {
@@ -15,7 +16,7 @@ public class Cat
         minWeight = 1000.0;
         maxWeight = 9000.0;
         weightFood = 0.0;
-
+        count++;
     }
 
     public void meow()
@@ -53,9 +54,11 @@ public class Cat
     public String getStatus()
     {
         if(weight + weightFood < minWeight) {
+            count--;
             return "Dead";
         }
         else if(weight + weightFood > maxWeight) {
+            count--;
             return "Exploded";
         }
         else if(weight + weightFood > originWeight) {
@@ -64,5 +67,13 @@ public class Cat
         else {
             return "Playing";
         }
+    }
+
+    /**
+     * Возвращает число живых кошек
+     * @return count
+     */
+    public static int getCount(){
+        return count;
     }
 }
