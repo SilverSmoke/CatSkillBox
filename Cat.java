@@ -19,6 +19,20 @@ public class Cat
         count++;
     }
 
+    /**
+     * Конструктор кошки с указанием веса
+     * @param weightIn
+     */
+    public Cat(Double weightIn)
+    {
+        weight = weightIn;
+        originWeight = weight;
+        minWeight = 1000.0;
+        maxWeight = 9000.0;
+        weightFood = 0.0;
+        count++;
+    }
+
     public void meow()
     {
         weightFood = weightFood - 1;
