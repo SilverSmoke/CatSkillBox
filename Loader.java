@@ -11,7 +11,7 @@ public class Loader
         Cat barsik = new Cat();
         Cat kuzya = new Cat();
         Cat red = new Cat();
-        Cat tuz = new Cat(1100.0);
+        Cat tuz = new Cat(2000.0);
 
 /*
         cat.feed(9000.0);
@@ -36,6 +36,7 @@ public class Loader
         System.out.println(tuz.getWeight() + " - " + tom.getStatus());
         tuz.defecation();
         System.out.println(tuz.getWeight() + " - " + tom.getStatus());
-        System.out.println(Cat.getCount());
+        System.out.println(tuz.getWeight());
+        System.out.println(tuz.originWeight);
     }
 }

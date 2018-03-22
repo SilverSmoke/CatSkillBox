@@ -1,7 +1,7 @@
 
 public class Cat
 {
-    private Double originWeight;
+    public Double originWeight;
     private Double weight;
 
     private Double minWeight;
@@ -36,7 +36,9 @@ public class Cat
         System.out.println("Meow");
     }
 
-    //метод "Сходить в туалет"
+    /**
+     * метод "Сходить в туалет"
+     */
     public void defecation(){
         weight -= 200.0;
         System.out.println("Furt!))");
