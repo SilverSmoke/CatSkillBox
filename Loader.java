@@ -5,7 +5,7 @@ public class Loader
 {
     public static void main(String[] args)
     {
-        Cat cat = new Cat();
+        Cat cat = new Cat(3000.);
         Cat tom = new Cat();
         Cat murzik = new Cat();
         Cat barsik = new Cat();
@@ -13,14 +13,6 @@ public class Loader
         Cat red = new Cat();
         Cat tuz = new Cat(2000.0);
 
-/*
-        cat.feed(9000.0);
-        for(int i = 0; i < 100000; i++) {
-
-            cat.meow();
-            System.out.println(cat.getStatus());
-            if (cat.getStatus().equals("Dead"))break;
-        }*/
 
         System.out.println(tom.getWeight() + " - " + tom.getStatus());
         tom.feed(500.0);
@@ -29,14 +21,31 @@ public class Loader
         System.out.println(tom.getWeight() + " - " + tom.getStatus());
         System.out.println(tom.getWeightFood());
         System.out.println(Cat.getCount());
-        System.out.println(tuz.getWeight() + " - " + tom.getStatus());
+        System.out.println(tuz.getWeight() + " - " + tuz.getStatus());
         tuz.feed(100.0);
-        System.out.println(tuz.getWeight() + " - " + tom.getStatus());
+        System.out.println(tuz.getWeight() + " - " + tuz.getStatus());
         tuz.defecation();
-        System.out.println(tuz.getWeight() + " - " + tom.getStatus());
+        System.out.println(tuz.getWeight() + " - " + tuz.getStatus());
         tuz.defecation();
-        System.out.println(tuz.getWeight() + " - " + tom.getStatus());
+        System.out.println(tuz.getWeight() + " - " + tuz.getStatus());
         System.out.println(tuz.getWeight());
         System.out.println(tuz.originWeight);
+        cat.feed(100.0);
+        System.out.println(cat.getWeight() + " - " + cat.getStatus());
+        cat.defecation();
+        System.out.println(cat.getWeight() + " - " + cat.getStatus());
+        cat.defecation();
+        cat.defecation();
+        cat.defecation();
+        cat.defecation();
+        cat.defecation();
+        cat.defecation();
+        cat.defecation();
+        cat.defecation();
+        cat.defecation();
+        cat.defecation();
+
+        System.out.println(cat.getWeight() + " - " + cat.getStatus());
+        System.out.println(Cat.getCount());
     }
 }
