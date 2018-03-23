@@ -1,9 +1,8 @@
 
 public class Cat
 {
-    private Double originWeight;
+    public Double originWeight;
     private Double weight;
-    private Double weightFood;
 
     private Double minWeight;
     private Double maxWeight;
@@ -15,7 +14,6 @@ public class Cat
         originWeight = weight;
         minWeight = 1000.0;
         maxWeight = 9000.0;
-        weightFood = 0.0;
         count++;
     }
 
@@ -29,53 +27,60 @@ public class Cat
         originWeight = weight;
         minWeight = 1000.0;
         maxWeight = 9000.0;
-        weightFood = 0.0;
         count++;
     }
 
     public void meow()
     {
-        weightFood = weightFood - 1;
+        weight = weight - 1;
         System.out.println("Meow");
     }
 
-    //метод "Сходить в туалет"
+    /**
+     * метод "Сходить в туалет"
+     */
     public void defecation(){
-        weightFood -= 200.0;
+        weight -= 200.0;
         System.out.println("Furt!))");
     }
 
     public void feed(Double amount)
     {
-        weightFood += amount;
+        weight += amount;
     }
 
     public void drink(Double amount)
     {
-        weightFood += amount;
+        weight += amount;
     }
 
     public Double getWeight()
     {
-        return weight + weightFood;
+        return weight;
     }
 
+    /**
+     * Возвращает вес еды, если вес кота меньше оригинального, то 0.0
+     * @return weightFood
+     */
     public Double getWeightFood()
     {
-        return weightFood;
+        Double weightFood = weight - originWeight;
+        if(weightFood > 0)return weightFood;
+        return 0.0;
     }
 
     public String getStatus()
     {
-        if(weight + weightFood < minWeight) {
+        if(weight < minWeight) {
             count--;
             return "Dead";
         }
-        else if(weight + weightFood > maxWeight) {
+        else if(weight > maxWeight) {
             count--;
             return "Exploded";
         }
-        else if(weight + weightFood > originWeight) {
+        else if(weight > originWeight) {
             return "Sleeping";
         }
         else {
