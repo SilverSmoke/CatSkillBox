@@ -59,6 +59,18 @@ public class Loader
         tig.feed(150.);
         System.out.println(tig.getWeightFood());
 
+        Cat dig = tig.getTwinCats();
+
+        tig.feed(150.);
+        System.out.println(tig.getStatus());
+        System.out.println(tig.getWeight());
+
+        System.out.println(tig.getWeightFood());
+
+        System.out.println(dig.getStatus());
+        System.out.println(dig.getWeight());
+        System.out.println(dig.getWeightFood());
+
         System.out.println(Cat.getCount());
     }
 

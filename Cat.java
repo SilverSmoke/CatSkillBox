@@ -95,4 +95,15 @@ public class Cat
     public static int getCount(){
         return count;
     }
+
+    /**
+     * Создает и возвращает глубокую копию
+     * @return Cat twinCats
+     */
+    public Cat getTwinCats(){
+        Cat twinCats = new Cat(this.weight);
+        twinCats.originWeight = this.originWeight;
+        twinCats.minWeight = this.minWeight;
+        return twinCats;
+    }
 }
