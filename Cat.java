@@ -25,7 +25,7 @@ public class Cat
     {
         weight = weightIn;
         originWeight = weight;
-        minWeight = 1000.0;
+        minWeight = 50.0;
         maxWeight = 9000.0;
         count++;
     }
@@ -73,11 +73,11 @@ public class Cat
     public String getStatus()
     {
         if(weight < minWeight) {
-            count--;
+            count--;//минус кошка
             return "Dead";
         }
         else if(weight > maxWeight) {
-            count--;
+            count--;//минус кошка
             return "Exploded";
         }
         else if(weight > originWeight) {

@@ -14,6 +14,10 @@ public class Loader
         Cat tuz = new Cat(2000.0);
 
 
+
+
+
+
         System.out.println(tom.getWeight() + " - " + tom.getStatus());
         tom.feed(500.0);
         System.out.println(tom.getWeight() + " - " + tom.getStatus());
@@ -45,7 +49,27 @@ public class Loader
         cat.defecation();
         cat.defecation();
 
-        System.out.println(cat.getWeight() + " - " + cat.getStatus());
+        /**
+         * Создание кота при помощи
+         * метода getKitten
+         */
+        Cat tig = getKitten();
+        System.out.println(tig.getStatus());
+        System.out.println(tig.getWeight());
+        tig.feed(150.);
+        System.out.println(tig.getWeightFood());
+
         System.out.println(Cat.getCount());
+    }
+
+    /**
+     * Создание объекта типа Cat
+     * со случайным весом от 100 до 200 граммов
+     * @return Cat kitten
+     */
+    public static Cat getKitten(){
+        Double randomWeight = 100 + 200 * Math.random();
+        Cat kitten = new Cat(randomWeight);
+        return kitten;
     }
 }
